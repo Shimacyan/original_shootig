@@ -1,55 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     float playerSpeed = 8;
-      public GameObject gameOverUI;
-      public Text Timer;
-      public float time = 10;
+    public GameObject gameOverUI;
+    public Text Timer;
+    public float time = 10;
+
+    private Rigidbody rb;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         time -= Time.deltaTime;
-         Timer.text = "Time: " + time.ToString("F1");
-         if (time <= 0)
-         {
+        Timer.text = "Time: " + time.ToString("F1");
+        if (time <= 0)
+        {
             SceneManager.LoadScene("2");
-         }
-
-
-        if(Input.GetKey(KeyCode.W)){
-            transform.Translate(Vector2.up * playerSpeed * Time.deltaTime); 
         }
 
-        if(Input.GetKey(KeyCode.S)){
-            transform.Translate(-Vector2.up * playerSpeed * Time.deltaTime); 
+
+        Vector3 moveDirection = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveDirection += Vector3.up;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            moveDirection -= Vector3.up;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveDirection -= Vector3.right;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveDirection += Vector3.right;
         }
 
-        if(Input.GetKey(KeyCode.D)){
-            transform.Translate(Vector2.right * playerSpeed * Time.deltaTime);
-        }
-
-        if(Input.GetKey(KeyCode.A)){
-            transform.Translate(-
-            Vector2.right * playerSpeed * Time.deltaTime);
-        }
+        rb.velocity = moveDirection * playerSpeed;
     }
-        
-        void OnCollisionEnter(Collision collision){
-            if (collision.gameObject.tag == "Enemy")
-            {
-                gameOverUI.SetActive(true);
-            }
 
+    void OnCollisionEnter(Collision collision)
+    {
+
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            gameOverUI.SetActive(true);
         }
+
     }
+}
+
+
+
+
 

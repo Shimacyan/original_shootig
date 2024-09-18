@@ -9,8 +9,8 @@ public class EnemyContoroller : MonoBehaviour
     float speed = 3f;
 
     void Start()
-    { 
-        playerTr = GameObject.FindGameObjectWithTag("Player").transform; 
+    {
+        playerTr = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -20,7 +20,8 @@ public class EnemyContoroller : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(
             transform.position,
-            new Vector2(playerTr.position.x, playerTr.position.y), 
+            new Vector2(playerTr.position.x, playerTr.position.y),
             speed * Time.deltaTime);
     }
+
 }
