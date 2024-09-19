@@ -49,12 +49,18 @@ public class BulletEnemyController : MonoBehaviour
         }
     }
 
-    void Shoot()
+   void Shoot()
+{
+    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+    Rigidbody rb = bullet.GetComponent<Rigidbody>(); // Rigidbody2D から Rigidbody に変更
+    if (rb != null) 
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = firePoint.right * bulletSpeed;
+        rb.velocity = firePoint.right * bulletSpeed; 
     }
+    else
+    {
+        Debug.LogError("Rigidbody コンポーネントが弾丸プレハブから欠落しています！");
+    }
+}
 }
