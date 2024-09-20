@@ -12,7 +12,7 @@ public class BulletEnemyController : MonoBehaviour
     private float nextFireTime;
     private Transform player;
 
-    public Transform target; // 向きたい対象の Transform
+    public Transform target; 
     public bool flipX = false; // 左右反転が必要かどうか
 
 
@@ -53,14 +53,14 @@ public class BulletEnemyController : MonoBehaviour
 {
     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-    Rigidbody rb = bullet.GetComponent<Rigidbody>(); // Rigidbody2D から Rigidbody に変更
+    Rigidbody rb = bullet.GetComponent<Rigidbody>(); 
     if (rb != null) 
     {
         rb.velocity = firePoint.right * bulletSpeed; 
     }
     else
     {
-        Debug.LogError("Rigidbody コンポーネントが弾丸プレハブから欠落しています！");
+        Debug.LogError("欠落");
     }
 }
 }
