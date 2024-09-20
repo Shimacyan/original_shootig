@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
+    public int currentStage = 1; 
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,9 @@ public class PlayerController : MonoBehaviour
         Timer.text = "Time: " + time.ToString("F1");
         if (time <= 0)
         {
-            SceneManager.LoadScene("2");
+            currentStage++;
+            string nextSceneName =  currentStage.ToString();
+            SceneManager.LoadScene(nextSceneName);
         }
 
 
