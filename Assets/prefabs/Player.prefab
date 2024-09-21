@@ -102,6 +102,12 @@ MonoBehaviour:
   gameOverUI: {fileID: 0}
   Timer: {fileID: 0}
   time: 10
+  currentStage: 1
+  isTimerRunning: 1
+  maxHP: 3
+  currentHP: 0
+  heartPrefab: {fileID: 731383417705711352, guid: d756b163794884b12886fb8a24fc180a, type: 3}
+  canvas: {fileID: 6250778764515729195, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
 --- !u!65 &2385971302794499371
 BoxCollider:
   m_ObjectHideFlags: 0
