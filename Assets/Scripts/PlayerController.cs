@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
-    public int currentStage = 1;
+    public static int currentStage = 1;
 
     public bool isTimerRunning = true;
 

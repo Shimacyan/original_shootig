@@ -23,5 +23,11 @@ public class Bulletcontroller : MonoBehaviour
             Debug.Log(collision.gameObject.name);
             Destroy(gameObject); 
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(collision.gameObject.name);
+            Destroy(gameObject); 
+        }
     }
 }
