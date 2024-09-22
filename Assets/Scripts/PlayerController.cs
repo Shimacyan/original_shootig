@@ -92,8 +92,11 @@ public class PlayerController : MonoBehaviour
             {
                 heart2.SetActive(false);
                 heart2bool = false;
-                gameOverUI.SetActive(true);
+                // gameOverUI.SetActive(true);
                 isTimerRunning = false;
+                SceneManager.LoadScene("Retry");
+                heart1bool = true;
+                heart2bool = true;
             }
         }
 
