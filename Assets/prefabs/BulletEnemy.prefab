@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1244462754326728292}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3376541839570235393}
   - component: {fileID: 709636437140422378}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1240068474510530006}
   - component: {fileID: 1847099841423031459}
   - component: {fileID: -4032298902705322492}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BulletEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ MonoBehaviour:
   firePoint: {fileID: 1244462754326728292}
   fireRate: 1
   bulletSpeed: 5
-  target: {fileID: 0}
+  target: {fileID: 6324043577580400386, guid: 86d51dc85abe24b24928cf58544f4800, type: 3}
   flipX: 0
 --- !u!65 &1847099841423031459
 BoxCollider:
