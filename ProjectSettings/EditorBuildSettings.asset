@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/4.unity
     guid: b08df9e878bcf41a3ad474af8c52c337
   - enabled: 1
+    path: Assets/Scenes/Goal.unity
+    guid: 0f47b514f21b642b09b063aea537e047
+  - enabled: 1
     path: Assets/Scenes/Retry.unity
     guid: c7fe94e49dbd9436e9ba15bf1b4e65c5
   m_configObjects: {}

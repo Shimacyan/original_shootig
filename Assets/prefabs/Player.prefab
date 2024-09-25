@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
   Timer: {fileID: 0}
-  time: 3
+  time: 10
   isTimerRunning: 1
   heart1: {fileID: 0}
   heart2: {fileID: 0}

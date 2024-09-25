@@ -37,56 +37,70 @@ public class PlayerController : MonoBehaviour
         if (isTimerRunning)
         {
 
-            
+
             time -= Time.deltaTime;
             Timer.text = "Time: " + time.ToString("F1");
 
-            string nextSceneName = ""; 
+            string nextSceneName = "";
 
             if (time <= 0)
             {
-                isTimerRunning = false; 
+                isTimerRunning = false;
                 currentStage++;
                 nextSceneName = currentStage.ToString();
 
-                // フェードアウトが完了した後にシーン遷移を行うようにコールバックを設定
-                FadeManager.Instance.LoadScene(nextSceneName, 1.0f, () => {
-                    SceneManager.LoadScene(nextSceneName);
-                });
+                Debug.Log("Current Stage: " + currentStage); // 現在のステージ番号を出力
+                Debug.Log("Next Scene Name: " + nextSceneName); // 次のシーン名を出力
+
+                if (Application.CanStreamedLevelBeLoaded(nextSceneName))
+                {
+
+                    FadeManager.Instance.LoadScene(nextSceneName, 1.0f, () =>
+                    {
+                        SceneManager.LoadScene(nextSceneName);
+                    });
+                }
+                else
+                {
+                    FadeManager.Instance.LoadScene("Goal", 1.0f, () =>
+                    {
+                        SceneManager.LoadScene("Goal");
+                    });
+                }
             }
         }
 
-            Vector3 moveDirection = Vector3.zero;
+        Vector3 moveDirection = Vector3.zero;
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                moveDirection += Vector3.up;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                moveDirection -= Vector3.up;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                moveDirection -= Vector3.right;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                moveDirection += Vector3.right;
-            }
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveDirection += Vector3.up;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            moveDirection -= Vector3.up;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveDirection -= Vector3.right;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveDirection += Vector3.right;
+        }
 
-            rb.velocity = moveDirection * playerSpeed;
+        rb.velocity = moveDirection * playerSpeed;
 
-            if (heart1bool == false)
-            {
-                heart1.SetActive(false);
-            }
+        if (heart1bool == false)
+        {
+            heart1.SetActive(false);
+        }
 
-            if (heart2bool == false)
-            {
-                heart2.SetActive(false);
-            }
-        
+        if (heart2bool == false)
+        {
+            heart2.SetActive(false);
+        }
+
     }
 
     void OnCollisionEnter(Collision collision)
