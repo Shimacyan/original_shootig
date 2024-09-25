@@ -15,15 +15,19 @@ public class BulletEnemyController : MonoBehaviour
     public Transform target; 
     public bool flipX = false; // 左右反転が必要かどうか
 
+    PlayerController playerController;
+
 
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+         playerController = FindObjectOfType<PlayerController>();
     }
     void Update()
     {
-        if (Time.time > nextFireTime)
+         if (playerController != null && playerController.isTimerRunning && Time.time > nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + 1f / fireRate;

@@ -1,19 +1,33 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class MainSoundScript : MonoBehaviour {
-    public bool DontDestroyEnabled = true;
+public class MusicController : MonoBehaviour // static を削除
+{
+    private static MusicController instance; // シングルトンインスタンス
 
-    // Use this for initialization
-    void Start () {
-        if (DontDestroyEnabled) {
-            // Sceneを遷移してもオブジェクトが消えないようにする
-            DontDestroyOnLoad (this);
+    void Awake()
+    {
+        // 既にインスタンスが存在する場合は、自身を破棄
+        if (instance != null && instance != this) 
+        {
+            Destroy(gameObject);
+            return;
         }
+
+        // インスタンスを自身に設定し、シーン遷移後も保持
+        instance = this;
+        DontDestroyOnLoad(gameObject); 
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
-    void Update () {
-
+    void Update()
+    {
+        
     }
 }
