@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5235582388774470439}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.5153745, w: 0.85696507}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5153732, w: 0.8569659}
   m_LocalPosition: {x: 1.08, y: 0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   firePoint: {fileID: 1244462754326728292}
   fireRate: 1
   bulletSpeed: 5
-  target: {fileID: 6324043577580400386, guid: 86d51dc85abe24b24928cf58544f4800, type: 3}
+  target: {fileID: 0}
   flipX: 0
 --- !u!65 &1847099841423031459
 BoxCollider:

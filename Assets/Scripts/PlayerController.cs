@@ -36,14 +36,25 @@ public class PlayerController : MonoBehaviour
     {
         if (isTimerRunning)
         {
+
+            
             time -= Time.deltaTime;
             Timer.text = "Time: " + time.ToString("F1");
+
+            string nextSceneName = ""; 
+
             if (time <= 0)
             {
+                isTimerRunning = false; 
                 currentStage++;
-                string nextSceneName = currentStage.ToString();
-                SceneManager.LoadScene(nextSceneName);
+                nextSceneName = currentStage.ToString();
+
+                // フェードアウトが完了した後にシーン遷移を行うようにコールバックを設定
+                FadeManager.Instance.LoadScene(nextSceneName, 1.0f, () => {
+                    SceneManager.LoadScene(nextSceneName);
+                });
             }
+        }
 
             Vector3 moveDirection = Vector3.zero;
 
@@ -75,7 +86,7 @@ public class PlayerController : MonoBehaviour
             {
                 heart2.SetActive(false);
             }
-        }
+        
     }
 
     void OnCollisionEnter(Collision collision)
@@ -99,16 +110,11 @@ public class PlayerController : MonoBehaviour
                 heart2bool = true;
             }
         }
-
-
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
         heart1 = GameObject.Find("Heart1");
         heart2 = GameObject.Find("Heart2");
-
-
     }
 }
