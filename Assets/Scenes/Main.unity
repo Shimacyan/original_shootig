@@ -215,11 +215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -411,18 +411,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 874024824696253723, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 874024824696253723, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 874024824696253723, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5568628
-      objectReference: {fileID: 0}
     - target: {fileID: 4919903552277081079, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -505,10 +493,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250778764515729195, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
       propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6250778764515729195, guid: 2244c87f002b046e2aee395b5e1944ed, type: 3}
-      propertyPath: m_TagString
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
