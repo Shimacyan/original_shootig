@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart2
       objectReference: {fileID: 0}
+    - target: {fileID: 731383417705711352, guid: d756b163794884b12886fb8a24fc180a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4015251337478273648, guid: d756b163794884b12886fb8a24fc180a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.1

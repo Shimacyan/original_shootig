@@ -8594,3 +8594,19 @@ Received Import Request.
 Start importing Assets/Scenes/Goal.unity using Guid(0f47b514f21b642b09b063aea537e047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20495bdaa282a3b443598952d5e459f3') in 0.000765 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 20328.075800 seconds.
+  path: Assets/Scenes/Title.unity
+  artifactKey: Guid(4499e21e1a6264f9d81ce9428947ec90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Title.unity using Guid(4499e21e1a6264f9d81ce9428947ec90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1dc61d471056f9d29247f509820587') in 0.016333 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 18.230492 seconds.
+  path: Assets/Red heart icon.png
+  artifactKey: Guid(b41e2eb30554d477ab6585686acb1830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Red heart icon.png using Guid(b41e2eb30554d477ab6585686acb1830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82de8dbb31b20284deaee03eb9d0078') in 0.177425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
